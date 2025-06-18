@@ -1,0 +1,1434 @@
+[
+    {
+        "date": "2025-01-01",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-01",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Transport",
+        "amount": 50,
+        "description": "Daily commute fuel",
+        "paymentModeKey": "Cash"
+    },
+    {
+        "date": "2025-01-02",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Breakfast, Lunch, and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-02",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Transport",
+        "amount": 60,
+        "description": "Daily commute fuel",
+        "paymentModeKey": "Cash"
+    },
+    {
+        "date": "2025-01-03",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Rent",
+        "amount": 10500,
+        "description": "Monthly rent",
+        "paymentModeKey": "Cash"
+    },
+    {
+        "date": "2025-01-03",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-04",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 210,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-05",
+        "categoryKey": "Enjoyment",
+        "subcategoryKey": "Travel",
+        "amount": 1800,
+        "description": "Weekend trip to Mysore",
+        "paymentModeKey": "Debit Card"
+    },
+    {
+        "date": "2025-01-05",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-06",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 225,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-07",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-08",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Grooming",
+        "amount": 400,
+        "description": "Salon visit",
+        "paymentModeKey": "Cash"
+    },
+    {
+        "date": "2025-01-08",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-09",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-10",
+        "categoryKey": "Other",
+        "subcategoryKey": "",
+        "amount": 900,
+        "description": "Impulse shopping",
+        "paymentModeKey": "Credit Card"
+    },
+    {
+        "date": "2025-01-10",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-11",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-12",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 225,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-13",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-14",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-15",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-15",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Transport",
+        "amount": 1300,
+        "description": "Monthly petrol expense",
+        "paymentModeKey": "Debit Card"
+    },
+    {
+        "date": "2025-01-16",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-17",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 210,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-18",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-19",
+        "categoryKey": "Enjoyment",
+        "subcategoryKey": "Food",
+        "amount": 1200,
+        "description": "Dinner party with friends",
+        "paymentModeKey": "Credit Card"
+    },
+    {
+        "date": "2025-01-19",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 225,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-20",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-21",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-22",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-23",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-24",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-25",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-26",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-27",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-28",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-29",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-30",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-31",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-01-31",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Health",
+        "amount": 600,
+        "description": "Monthly medicine purchase",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-01",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Rent",
+        "amount": 10500,
+        "description": "Monthly rent",
+        "paymentModeKey": "Cash"
+    },
+    {
+        "date": "2025-02-01",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 225,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-02",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-03",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-04",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-05",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-06",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-07",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-08",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-09",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-10",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Grooming",
+        "amount": 350,
+        "description": "Salon visit",
+        "paymentModeKey": "Cash"
+    },
+    {
+        "date": "2025-02-10",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-11",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-12",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-13",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-14",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-15",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Transport",
+        "amount": 1250,
+        "description": "Monthly petrol expense",
+        "paymentModeKey": "Debit Card"
+    },
+    {
+        "date": "2025-02-15",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-16",
+        "categoryKey": "Enjoyment",
+        "subcategoryKey": "Hangout",
+        "amount": 800,
+        "description": "Movie night",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-16",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-17",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-18",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-19",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-20",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-21",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-22",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-23",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-24",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-25",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-26",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-27",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-02-28",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-01",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Rent",
+        "amount": 10500,
+        "description": "Monthly rent",
+        "paymentModeKey": "Cash"
+    },
+    {
+        "date": "2025-03-01",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-02",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-03",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-04",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-05",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-06",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-07",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-08",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-09",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-10",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Grooming",
+        "amount": 380,
+        "description": "Salon visit",
+        "paymentModeKey": "Cash"
+    },
+    {
+        "date": "2025-03-10",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-11",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-12",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-13",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-14",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-15",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Transport",
+        "amount": 1350,
+        "description": "Monthly petrol expense",
+        "paymentModeKey": "Debit Card"
+    },
+    {
+        "date": "2025-03-15",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-16",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-17",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-18",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-19",
+        "categoryKey": "Enjoyment",
+        "subcategoryKey": "Food",
+        "amount": 1500,
+        "description": "Birthday party dinner",
+        "paymentModeKey": "Credit Card"
+    },
+    {
+        "date": "2025-03-19",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-20",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-21",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-22",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-23",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-24",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-25",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-26",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-27",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-28",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-29",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-30",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-31",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-03-31",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Health",
+        "amount": 650,
+        "description": "Monthly medicine purchase",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-01",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Rent",
+        "amount": 10500,
+        "description": "Monthly rent",
+        "paymentModeKey": "Cash"
+    },
+    {
+        "date": "2025-04-01",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-02",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-03",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-04",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-05",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-06",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-07",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-08",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-09",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-10",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Grooming",
+        "amount": 360,
+        "description": "Salon visit",
+        "paymentModeKey": "Cash"
+    },
+    {
+        "date": "2025-04-10",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-11",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-12",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-13",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-14",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-15",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Transport",
+        "amount": 1300,
+        "description": "Monthly petrol expense",
+        "paymentModeKey": "Debit Card"
+    },
+    {
+        "date": "2025-04-15",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-16",
+        "categoryKey": "Enjoyment",
+        "subcategoryKey": "Travel",
+        "amount": 2000,
+        "description": "Weekend trip to Coorg",
+        "paymentModeKey": "Debit Card"
+    },
+    {
+        "date": "2025-04-16",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-17",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-18",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-19",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-20",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-21",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-22",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-23",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-24",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-25",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-26",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-27",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-28",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-29",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-30",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-04-30",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Health",
+        "amount": 620,
+        "description": "Monthly medicine purchase",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-01",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Rent",
+        "amount": 10500,
+        "description": "Monthly rent",
+        "paymentModeKey": "Cash"
+    },
+    {
+        "date": "2025-05-01",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-02",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-03",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-04",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-05",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-06",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-07",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-08",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-09",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-10",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Grooming",
+        "amount": 370,
+        "description": "Salon visit",
+        "paymentModeKey": "Cash"
+    },
+    {
+        "date": "2025-05-10",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-11",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-12",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-13",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-14",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-15",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Transport",
+        "amount": 1280,
+        "description": "Monthly petrol expense",
+        "paymentModeKey": "Debit Card"
+    },
+    {
+        "date": "2025-05-15",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-16",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-17",
+        "categoryKey": "Enjoyment",
+        "subcategoryKey": "Hangout",
+        "amount": 900,
+        "description": "Concert tickets",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-17",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-18",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-19",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-20",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-21",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-22",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-23",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-24",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-25",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 240,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-26",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 230,
+        "description": "Lunch and Snacks",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-27",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 245,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-28",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 220,
+        "description": "Breakfast and Dinner",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-29",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 235,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-30",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 250,
+        "description": "Breakfast and Lunch",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-31",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Food",
+        "amount": 215,
+        "description": "Daily meals",
+        "paymentModeKey": "UPI"
+    },
+    {
+        "date": "2025-05-31",
+        "categoryKey": "Necessities",
+        "subcategoryKey": "Health",
+        "amount": 630,
+        "description": "Monthly medicine purchase",
+        "paymentModeKey": "UPI"
+    }
+]

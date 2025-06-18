@@ -4,25 +4,60 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import ExpenseListScreen from './src/screens/ExpenseListScreen';
 import { PaperProvider, Text } from "react-native-paper";
-import { View } from "react-native";
+import { Alert, View } from "react-native";
 import { enableScreens } from "react-native-screens";
 import { seedInitialData } from "./src/db/seedInitialData";
+import LoginScreen from "./src/screens/LoginScreen";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
+import { configureGoogleSignIn } from "./src/screens/authHelper";
 
 const Stack = createNativeStackNavigator();
 enableScreens();
 
 const App: React.FC = () => {
 
+  const [isLoggedIn, setIsLoggedIn] = React.useState<boolean | null>(null);
+
   useEffect(() => {
-    seedInitialData();
+
+    configureGoogleSignIn();
+    const fetchUser = async () => {
+      await getCurrentUser();
+    };
+    fetchUser();
   }, []);
+
+  const getCurrentUser = async () => {
+    try {
+      const { type, data } = await GoogleSignin.signInSilently();
+      console.log("Silent sign-in result: ", type, data);
+      console.log("User data: ", GoogleSignin.hasPreviousSignIn());
+      
+      if (type === 'success') {
+        // downloadFromGoogleDrive();
+        setIsLoggedIn(true);
+        // seedInitialData();
+      } else {
+        setIsLoggedIn(false);
+      }
+    } catch (error) {
+      console.error("Error during silent sign-in: ", error);
+      setIsLoggedIn(false);
+    }
+  }
 
 
   return (
     <PaperProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="ExpenseList">
-          <Stack.Screen name="ExpenseList" component={ExpenseListScreen} />
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          { isLoggedIn ? (
+            <Stack.Screen name="ExpenseList" component={ExpenseListScreen} />
+          ) : (
+            <Stack.Screen name="Login">
+              {props => <LoginScreen {...props} onLoginSuccess={() => setIsLoggedIn(true)} />}
+            </Stack.Screen>
+          )}
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>
