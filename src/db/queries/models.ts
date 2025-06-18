@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import RNFS from "react-native-fs";
 
 // Category CRUD
-export const createCategory = async (key: string, displayName: string) => {
+export const createCategory = async (key: string, displayName: string) => {  
     return database.write(() => {
         return database.get<CategoryModel>('categories').create((record) => {
             record.key = key;
@@ -342,7 +342,7 @@ export const restoreFromBackup = async (filePath: string) => {
     // Restore Categories
     await Promise.all(
       backupData.categories.map(async (category: any) => {
-        const newCategory = await createCategory(category.key, category.displayName);
+        const newCategory = await createCategory(category.key, category.display_name);
         categoryMap.set(category.id, newCategory.id);
       })
     );
@@ -355,7 +355,7 @@ export const restoreFromBackup = async (filePath: string) => {
           console.warn(`Category ID not found for subcategory ${subcategory.key}`);
           return;
         }
-        const newSubcategory = await createSubcategory(subcategory.key, subcategory.displayName, categoryId);
+        const newSubcategory = await createSubcategory(subcategory.key, subcategory.display_name, categoryId);
         subcategoryMap.set(subcategory.id, newSubcategory.id);
       })
     );
@@ -363,7 +363,7 @@ export const restoreFromBackup = async (filePath: string) => {
     // Restore Payment Modes
     await Promise.all(
       backupData.paymentModes.map(async (mode: any) => {
-        const newMode = await createPaymentMode(mode.key, mode.displayName);
+        const newMode = await createPaymentMode(mode.key, mode.display_name);
         paymentModeMap.set(mode.id, newMode.id);
       })
     );
@@ -386,7 +386,7 @@ export const restoreFromBackup = async (filePath: string) => {
           subcategoryId,
           expense.amount,
           paymentModeId,
-          expense.description
+          expense.notes
         );
       })
     );
