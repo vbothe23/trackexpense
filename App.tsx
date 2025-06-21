@@ -13,6 +13,7 @@ import LoginScreen from "./src/screens/LoginScreen";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { configureGoogleSignIn } from "./src/screens/authHelper";
 import AppDrawer from "./src/components/AppDrawer";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const Stack = createNativeStackNavigator();
 enableScreens();
@@ -49,45 +50,18 @@ const App: React.FC = () => {
     }
   }
 
-
   return (
-  //   <GestureHandlerRootView style={{ flex: 1 }}>
-  //   <PaperProvider>
-  //     <NavigationContainer>
-  //       <Stack.Navigator screenOptions={{ headerShown: false }}>
-  //         { isLoggedIn ? (
-  //           <Stack.Screen name="AppDrawer" component={AppDrawer} />
-  //         ) : (
-  //           <Stack.Screen name="Login">
-  //             {props => <LoginScreen {...props} onLoginSuccess={() => setIsLoggedIn(true)} />}
-  //           </Stack.Screen>
-  //         ) }
-  //       </Stack.Navigator>
-  //     </NavigationContainer>
-  //   </PaperProvider>
-  // </GestureHandlerRootView>
-
-
-
     <PaperProvider>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
 
           { isLoggedIn ? (
-            <Stack.Screen name="ExpenseList" component={AppDrawer} />
+            <Stack.Screen name="Home" component={AppDrawer} />
           ) : (
             <Stack.Screen name="Login">
               {props => <LoginScreen {...props} onLoginSuccess={() => setIsLoggedIn(true)} />}
             </Stack.Screen>
           ) }
-
-          {/* { isLoggedIn ? (
-            <Stack.Screen name="ExpenseList" component={ExpenseListScreen} />
-          ) : (
-            <Stack.Screen name="Login">
-              {props => <LoginScreen {...props} onLoginSuccess={() => setIsLoggedIn(true)} />}
-            </Stack.Screen>
-          )} */}
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>
