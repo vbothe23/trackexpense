@@ -1,18 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Modal, View, ScrollView, StyleSheet, Button, Alert } from "react-native";
-import { DataTable, FAB, Text } from "react-native-paper";
+import React, { useState } from "react";
+import { View, StyleSheet, Button, Alert } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
-import ExpenseForm from "../ExpenseForm";
-import { ExpenseModel } from "../db/model/models";
-// import { Expense } from "../components/Expense";
-import { CategoryModel, PaymentModeModel } from "../db/model/models";
-import CategoryForm from "./CategoryForm";
-import { createExpense, readCategories, readExpenses, updateExpense } from "../db/queries/models";
-import { date } from "@nozbe/watermelondb/decorators";
-import { ExpenseType, ExpenseViewModel } from "../types";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
-import { downloadFromGoogleDrive } from "./authHelper";
-import { GOOGLE_WELCIENT_ID } from "../../envWrapper";
+import { configureGoogleSignIn } from "./authHelper";
 
 
 type LoginScreenProps = {
@@ -24,11 +14,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation, onLoginSuccess })
 
     const [ userInfo, setUserInfo ] = useState<any>(null);
 
-    GoogleSignin.configure({
-            webClientId: GOOGLE_WELCIENT_ID,
-            scopes: ["https://www.googleapis.com/auth/drive.file"],
-            offlineAccess: true,
-          });
+    configureGoogleSignIn();
 
     const signIn = async () => {
     try {

@@ -202,28 +202,6 @@ export const createSubcategory = async (key: string, displayName: string, catego
     });
   }
 
-
-//   export const exportDataBase = async () => {
-//   const categories = await database.get<CategoryModel>('categories').query().fetch()
-//   const subcategories = await database.get<SubcategoryModel>('subcategories').query().fetch()
-//   const paymentModes = await database.get<PaymentModeModel>('payment_modes').query().fetch()
-//   const expenses = await database.get<ExpenseModel>('expenses').query().fetch()
-
-//   const data = {
-//     categories,
-//     subcategories,
-//     paymentModes,
-//     expenses,
-//   }
-
-//   const path = `${RNFS.DocumentDirectoryPath}/backup.json`
-//   await RNFS.writeFile(path, JSON.stringify(data), 'utf8')
-//   console.log("Database exported to", path)
-//   return path
-// }
-// [19:33:45] E | ReactNativeJS ▶︎ 'Error syncing data:', [TypeError: cyclical structure in JSON object]
-
-
 export const exportDataBase = async () => {
   const categories = await database.get<CategoryModel>('categories').query().fetch()
   const subcategories = await database.get<SubcategoryModel>('subcategories').query().fetch()
@@ -250,24 +228,6 @@ export const exportDataBase = async () => {
 }
 
 
-// export const clearDatabase = async () => {
-//   try {
-//     await database.write(async () => {
-//       await database.get('categories').query().destroyAll();
-//       await database.get('subcategories').query().destroyAll();
-//       await database.get('payment_modes').query().destroyAll();
-//       await database.get('expenses').query().destroyAll();
-//     });
-
-//     console.log('All data cleared successfully.');
-
-//   } catch (error) {
-//     console.error('Error clearing database:', error);
-//     throw error;
-//   }
-// };
-
-
 export const clearDatabase = async () => {
   try {
     await database.write(async () => {
@@ -289,45 +249,6 @@ export const clearDatabase = async () => {
     throw error;
   }
 };
-
-
-// export const restoreDatabaseFromBackup = async (filePath: string) => {
-//   try {
-//     const fileContent = await RNFS.readFile(filePath, 'utf8')
-//     const backupData = JSON.parse(fileContent)
-
-//     await database.write(async () => {
-//       // Clear existing data first (if needed)
-//       await database.get('categories').query().destroyAllPermanently()
-//       await database.get('expenses').query().destroyAllPermanently()
-//       await database.get('payment_modes').query().destroyAllPermanently()
-//       await database.get('subcategories').query().destroyAllPermanently()
-
-//       // Now insert new records
-//       for (const item of backupData.categories) {
-//         await database.get('categories').create(record => {
-//           record._raw.id = item.id   // you can set id if your schema allows
-//           record.name = item.name
-//         })
-//       }
-
-//       for (const item of backupData.expenses) {
-//         await database.get('expenses').create(record => {
-//           record._raw.id = item.id
-//           record.amount = item.amount
-//           record.categoryId = item.category_id
-//         })
-//       }
-
-//       // Similarly for payment_modes and subcategories
-//     })
-
-//     console.log("Database restored successfully from backup.")
-
-//   } catch (error) {
-//     console.error("Error restoring database:", error)
-//   }
-// }
 
 
 export const restoreFromBackup = async (filePath: string) => {

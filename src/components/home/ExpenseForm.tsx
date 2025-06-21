@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import DropDownComponent from './components/DropdownComponent';
-import { CategoryModel, PaymentModeModel, SubcategoryModel } from './db/model/models';
-import { readCategories, readPaymentModes, readSubcategories } from './db/queries/models';
-import { ExpenseType, ExpenseViewModel } from './types';
+import DropDownComponent from './DropdownComponent';
+import { CategoryModel, PaymentModeModel, SubcategoryModel } from '../../db/model/models';
+import { readCategories, readPaymentModes, readSubcategories } from '../../db/queries/models';
+import { ExpenseType, ExpenseViewModel } from '../../common/types';
 
 type ExpenseFormProps = {
   initialValues?: ExpenseViewModel | null;

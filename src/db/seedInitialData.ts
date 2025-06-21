@@ -60,41 +60,6 @@ const predefinedPaymentModes = [
     { key: 'net_banking', displayName: 'Net Banking' }
 ]
 
-// const predefinedExpenses = [
-//         {
-//             date: "2025-01-01",
-//             categoryKey: "necessities",
-//             subcategoryKey: "food",
-//             amount: 220,
-//             description: "Breakfast and Lunch",
-//             paymentModeKey: "upi"
-//         },
-//         {
-//             date: "2025-01-01",
-//             categoryKey: "necessities",
-//             subcategoryKey: "transport",
-//             amount: 50,
-//             description: "Daily commute fuel",
-//             paymentModeKey: "cash"
-//         },
-//         {
-//             date: "2025-01-02",
-//             categoryKey: "necessities",
-//             subcategoryKey: "food",
-//             amount: 245,
-//             description: "Breakfast, Lunch, and Snacks",
-//             paymentModeKey: "upi"
-//         },
-//         {
-//             date: "2025-01-02",
-//             categoryKey: "necessities",
-//             subcategoryKey: "transport",
-//             amount: 60,
-//             description: "Daily commute fuel",
-//             paymentModeKey: "cash"
-//         }
-//     ];
-
 export const seedInitialData = async () => {
     const isSeeded = await AsyncStorage.getItem('db_seeded');
     if (isSeeded) {

@@ -1,4 +1,4 @@
-import { CategoryModel, PaymentModeModel, SubcategoryModel } from "./db/model/models";
+import { CategoryModel, PaymentModeModel, SubcategoryModel } from "../db/model/models";
 
 export type ExpenseType = {
     id?: string;

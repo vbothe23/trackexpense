@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Modal, View, ScrollView, StyleSheet, Button, Alert } from "react-native";
-import { DataTable, FAB, Text } from "react-native-paper";
+import { DataTable, FAB } from "react-native-paper";
 import { StackNavigationProp } from "@react-navigation/stack";
-import ExpenseForm from "../ExpenseForm";
-import { ExpenseModel } from "../db/model/models";
-// import { Expense } from "../components/Expense";
-import { CategoryModel, PaymentModeModel } from "../db/model/models";
-import CategoryForm from "./CategoryForm";
-import { clearDatabase, createExpense, exportDataBase, readCategories, readExpenses, restoreFromBackup, updateExpense } from "../db/queries/models";
-import { date } from "@nozbe/watermelondb/decorators";
-import { ExpenseType, ExpenseViewModel } from "../types";
-import { downloadFromGoogleDrive, getAccessToken, getBackupFileId, uploadToGoogleDrive } from "./authHelper";
-import { database } from "../db";
-// import { uploadEncryptedDB } from "./dbSync";
+import ExpenseForm from "./ExpenseForm";
+import { ExpenseModel } from "../../db/model/models";
+import { clearDatabase, createExpense, exportDataBase, readExpenses, restoreFromBackup, updateExpense } from "../../db/queries/models";
+import { ExpenseType, ExpenseViewModel } from "../../common/types";
+import { downloadFromGoogleDrive, getAccessToken, getBackupFileId, uploadToGoogleDrive } from "../authentication/authHelper";
 
 type RootStackParamList = {
     ExpenseList: undefined;
@@ -27,7 +21,6 @@ interface Props {
 }
 
 const ExpenseListScreen: React.FC<{ navigation: StackNavigationProp<any> }> = ({ navigation }) => {
-    // const [expenses, setExpenses] = useState<ExpenseModel[]>([]);
     const [expenses, setExpenses] = useState<ExpenseViewModel[]>([]);
     const [modalVisible, setModalVisible] = useState(false);
 
@@ -86,8 +79,11 @@ const getExpenses = () => {
       // Fetch all relations in parallel for each expense
       const expensesWithRelations = await Promise.all(
         expenseModels.map(async e => {
+          // @ts-ignore
           const category = await e.category.fetch();
+          // @ts-ignore
           const subcategory = await e.subcategory.fetch();
+          // @ts-ignore
           const paymentMode = await e.paymentMode.fetch();
           return {
             id: e.id,
@@ -191,34 +187,7 @@ const onRestorePress = async () => {
                     />
                 </DataTable>
             </ScrollView>
-
-            <Button
-                title="Sync with Google Drive"
-                onPress={() => {
-                    onSyncPress();
-                    // uploadEncryptedDB();
-                }}
-
-                />
-
-                <Button
-                title="Retore From google drive"
-                onPress={() => {
-                    onRestorePress();
-                    // uploadEncryptedDB();
-                }}
-
-                />
-
-                <Button
-                title="Clear all db"
-                onPress={() => {
-                    clearDatabase();
-                    // uploadEncryptedDB();
-                }}
-
-                />
-
+            
             <FAB
                 style={styles.fab}
                 icon="plus"

@@ -1,19 +1,14 @@
 import 'react-native-reanimated';
-import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-import ExpenseListScreen from './src/screens/ExpenseListScreen';
-import { PaperProvider, Text } from "react-native-paper";
-import { Alert, View } from "react-native";
+import { PaperProvider } from "react-native-paper";
 import { enableScreens } from "react-native-screens";
-import { seedInitialData } from "./src/db/seedInitialData";
-import LoginScreen from "./src/screens/LoginScreen";
+import LoginScreen from "./src/components/authentication/LoginScreen";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
-import { configureGoogleSignIn } from "./src/screens/authHelper";
-import AppDrawer from "./src/components/AppDrawer";
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { configureGoogleSignIn } from "./src/components/authentication/authHelper";
+import AppDrawer from "./src/components/navigation/AppDrawer";
+import { seedInitialData } from './src/db/seedInitialData';
 
 const Stack = createNativeStackNavigator();
 enableScreens();

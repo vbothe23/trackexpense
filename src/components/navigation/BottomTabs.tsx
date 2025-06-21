@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import ExpenseListScreen from "../screens/ExpenseListScreen";
-import Summary from "./Summary";
+import ExpenseListScreen from "../home/ExpenseListScreen";
+import Summary from "../summary/Summary";
 
 
 const Tab = createBottomTabNavigator();
