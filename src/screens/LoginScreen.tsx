@@ -12,6 +12,7 @@ import { date } from "@nozbe/watermelondb/decorators";
 import { ExpenseType, ExpenseViewModel } from "../types";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { downloadFromGoogleDrive } from "./authHelper";
+import { GOOGLE_WELCIENT_ID } from "../../envWrapper";
 
 
 type LoginScreenProps = {
@@ -24,7 +25,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation, onLoginSuccess })
     const [ userInfo, setUserInfo ] = useState<any>(null);
 
     GoogleSignin.configure({
-            webClientId: "",
+            webClientId: GOOGLE_WELCIENT_ID,
             scopes: ["https://www.googleapis.com/auth/drive.file"],
             offlineAccess: true,
           });

@@ -1,0 +1,1 @@
+export const GOOGLE_WELCIENT_ID = process.env.GOOGLE_WELCIENT_ID
