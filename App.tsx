@@ -1,3 +1,5 @@
+import 'react-native-reanimated';
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -10,6 +12,7 @@ import { seedInitialData } from "./src/db/seedInitialData";
 import LoginScreen from "./src/screens/LoginScreen";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { configureGoogleSignIn } from "./src/screens/authHelper";
+import AppDrawer from "./src/components/AppDrawer";
 
 const Stack = createNativeStackNavigator();
 enableScreens();
@@ -48,16 +51,43 @@ const App: React.FC = () => {
 
 
   return (
+  //   <GestureHandlerRootView style={{ flex: 1 }}>
+  //   <PaperProvider>
+  //     <NavigationContainer>
+  //       <Stack.Navigator screenOptions={{ headerShown: false }}>
+  //         { isLoggedIn ? (
+  //           <Stack.Screen name="AppDrawer" component={AppDrawer} />
+  //         ) : (
+  //           <Stack.Screen name="Login">
+  //             {props => <LoginScreen {...props} onLoginSuccess={() => setIsLoggedIn(true)} />}
+  //           </Stack.Screen>
+  //         ) }
+  //       </Stack.Navigator>
+  //     </NavigationContainer>
+  //   </PaperProvider>
+  // </GestureHandlerRootView>
+
+
+
     <PaperProvider>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
+
           { isLoggedIn ? (
+            <Stack.Screen name="ExpenseList" component={AppDrawer} />
+          ) : (
+            <Stack.Screen name="Login">
+              {props => <LoginScreen {...props} onLoginSuccess={() => setIsLoggedIn(true)} />}
+            </Stack.Screen>
+          ) }
+
+          {/* { isLoggedIn ? (
             <Stack.Screen name="ExpenseList" component={ExpenseListScreen} />
           ) : (
             <Stack.Screen name="Login">
               {props => <LoginScreen {...props} onLoginSuccess={() => setIsLoggedIn(true)} />}
             </Stack.Screen>
-          )}
+          )} */}
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>

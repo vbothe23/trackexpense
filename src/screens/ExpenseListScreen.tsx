@@ -139,7 +139,7 @@ const onRestorePress = async () => {
 
     return (
         <View style={styles.container}>
-            <ScrollView>
+            <ScrollView horizontal>
                 <DataTable>
                     <DataTable.Header>
                         <DataTable.Title style={[styles.column, styles.headerCell]} textStyle={styles.headerText}>Date</DataTable.Title>
