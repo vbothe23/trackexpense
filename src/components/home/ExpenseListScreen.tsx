@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Modal, View, ScrollView, StyleSheet, Button, Alert } from "react-native";
-import { DataTable, FAB } from "react-native-paper";
+import { Modal, View, ScrollView, StyleSheet, Alert } from "react-native";
+import { Button, Card, DataTable, FAB, Text } from "react-native-paper";
 import { StackNavigationProp } from "@react-navigation/stack";
 import ExpenseForm from "./ExpenseForm";
 import { ExpenseModel } from "../../db/model/models";
 import { clearDatabase, createExpense, exportDataBase, readExpenses, restoreFromBackup, updateExpense } from "../../db/queries/models";
 import { ExpenseType, ExpenseViewModel } from "../../common/types";
 import { downloadFromGoogleDrive, getAccessToken, getBackupFileId, uploadToGoogleDrive } from "../authentication/authHelper";
+import HomePageCard from "../HomePageCard";
+import ExpenseCard from "../ExpenseCard";
 
 type RootStackParamList = {
     ExpenseList: undefined;
@@ -27,10 +29,25 @@ const ExpenseListScreen: React.FC<{ navigation: StackNavigationProp<any> }> = ({
     const [selectedExpense, setSelectedExpense] = useState<ExpenseViewModel | null>(null);
     const [page, setPage] = useState(1);
     const [rowsPerPage, setRowsPerPage] = useState(5);
+    const [totals, setTotals] = useState({});
+
 
     useEffect(() => {
         getExpenses();
     }, []);
+
+    useEffect(() => {
+    if (!expenses || expenses.length === 0) return;
+
+    const newTotals = expenses.reduce((acc, expense) => {
+        const category = expense.category?.displayName || "Unknown Category";
+        const amount = expense.amount || 0;
+
+        acc[category] = (acc[category] || 0) + amount;
+        return acc;
+    }, {});
+    setTotals(newTotals);
+}, [expenses]);
 
     const handleSave = (newExpense: ExpenseType) => {
 
@@ -133,9 +150,107 @@ const onRestorePress = async () => {
     await restoreFromBackup(filePath);
 };
 
+const calculation = () => {
+    expenses.filter(expense => expense.category?.displayName === "Necessities")
+    .reduce((total, expense) => total + expense.amount, 0);
+}
+
+const categories = [
+    "Necessities",
+    "Savings & Investments",
+    "Education",
+    "Enjoyment",
+    "Other"
+];
+
     return (
         <View style={styles.container}>
-            <ScrollView horizontal>
+
+            <View 
+            
+            style={{ 
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                alignItems: 'stretch',
+            }}
+            >
+
+                {categories.map(category => (
+                    <HomePageCard 
+                        key={category}
+                        category={category} 
+                        price={totals[category] || 0} 
+                        onPress={() => {
+                            setSelectedExpense(null);
+                            setModalVisible(true);
+                        }}
+                    />
+                ))}
+
+                {/* Uncomment this section if you want to display totals dynamically */}
+
+
+
+
+
+
+
+
+
+
+                {/* {totals && Object.entries(totals).map(([category, price]) => (
+                    <HomePageCard 
+                        key={category}
+                        category={category} 
+                        price={price} 
+                        onPress={() => {
+                            setSelectedExpense(null);
+                            setModalVisible(true);
+                        }}
+                    />
+                ))} */}
+                
+                {/* <HomePageCard 
+                category="Necessities" 
+                price={30000} />
+            
+                <HomePageCard 
+                    category="Savings & Investments" 
+                    price={30000} />
+                
+                <HomePageCard 
+                    category="Education" 
+                    price={3000} />
+                
+                <HomePageCard 
+                    category="Enjoyment" 
+                    price={30000} />
+                
+                <HomePageCard 
+                    category="Other" 
+                    price={4005400} /> */}
+            </View>
+
+            <ScrollView>
+                <View>
+                {expenses.map(expense => (
+                    <ExpenseCard 
+                    key={expense.id}
+                    category={expense.category?.displayName || "Unknown Category"}
+                    subCategory={expense.subcategory?.displayName || "Unknown Subcategory"}
+                    price={expense.amount}
+                    date={expense.date}
+                />
+                ))}
+            </View>
+            </ScrollView>
+        
+
+
+
+
+            {/* <ScrollView horizontal>
                 <DataTable>
                     <DataTable.Header>
                         <DataTable.Title style={[styles.column, styles.headerCell]} textStyle={styles.headerText}>Date</DataTable.Title>
@@ -186,7 +301,7 @@ const onRestorePress = async () => {
                         // react-native-paper DataTable.Pagination already provides next/prev buttons
                     />
                 </DataTable>
-            </ScrollView>
+            </ScrollView> */}
             
             <FAB
                 style={styles.fab}

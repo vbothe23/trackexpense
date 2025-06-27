@@ -7,12 +7,10 @@ import { configureGoogleSignIn } from "./authHelper";
 
 type LoginScreenProps = {
     navigation: StackNavigationProp<any>;
-    onLoginSuccess: () => void;
+    handleLoginSuccess: (userInfo: any) => void;
 };
 
-const LoginScreen: React.FC<LoginScreenProps> = ({ navigation, onLoginSuccess }) => {
-
-    const [ userInfo, setUserInfo ] = useState<any>(null);
+const LoginScreen: React.FC<LoginScreenProps> = ({ navigation, handleLoginSuccess }) => {
 
     configureGoogleSignIn();
 
@@ -20,25 +18,12 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation, onLoginSuccess })
     try {
         await GoogleSignin.hasPlayServices();
         const userInfo = await GoogleSignin.signIn();
-        setUserInfo(userInfo);
         console.log("Login Successful: , ", userInfo);
         // downloadFromGoogleDrive();
-        onLoginSuccess();
+        handleLoginSuccess(userInfo);
     } catch (error) {
         Alert.alert("Login Failed");
         console.error("Login Error: ", error);
-    }
-}
-
-const signOut = async () => {
-    try {
-        await GoogleSignin.revokeAccess();
-        await GoogleSignin.signOut();
-        setUserInfo(null);
-        Alert.alert("Signout Successful");
-    } catch (error) {
-        Alert.alert("Signout Failed");
-        console.error("Signout Error: ", error);
     }
 }
 
@@ -48,14 +33,6 @@ const signOut = async () => {
                 title="Login"
                 onPress={() => {
                     signIn();
-                }}
-                color="#6200ee"
-            />
-
-            <Button
-                title="Signout"
-                onPress={() => {
-                    signOut();
                 }}
                 color="#6200ee"
             />

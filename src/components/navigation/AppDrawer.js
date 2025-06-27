@@ -3,13 +3,18 @@ import React from "react";
 import { Alert, ToastAndroid, View } from "react-native";
 import { Text } from "react-native-gesture-handler";
 import AppTabs from "./BottomTabs";
-import { downloadFromGoogleDrive, getAccessToken, getBackupFileId, uploadToGoogleDrive } from "../authentication/authHelper";
+import { downloadFromGoogleDrive, getAccessToken, getBackupFileId, signOut, uploadToGoogleDrive } from "../authentication/authHelper";
 import { clearDatabase, exportDataBase, restoreFromBackup } from "../../db/queries/models";
+import { seedInitialData } from "../../db/seedInitialData";
 
 const Drawer = createDrawerNavigator();
 
 
 const CustomDrawerContent = (props) => {
+
+    const { userInfo, handleLogout, navigation } = props;
+
+    console.log("CUSTOM PROPS", {userInfo});
 
     const handleSync = () => {
         Alert.alert("Data Synced");
@@ -42,27 +47,35 @@ const CustomDrawerContent = (props) => {
     return (
         <DrawerContentScrollView {...props}>
             <View style={{padding: 16}}>
-                <Text style={{ fontSize: 18, marginBottom: 16 }}>User: Vishal B</Text>
+                <Text style={{ fontSize: 18, marginBottom: 16 }}>{`${userInfo?.name}`}</Text>
                 <Text style={{ marginBottom: 16 }}>Last Sync: 2025-06-21 08:05 PM</Text>
                 {/* <DrawerItem label="Sync Now" onPress={handleSync} />
                 <DrawerItem label="Exit App" onPress={handleExit} /> */}
                 <DrawerItem label={"Upload data to drive"} onPress={onPressUploadToDrive} />
                 <DrawerItem label={"Restore data from drive"} onPress={onPressRestoreFromDrive} />
                 <DrawerItem label={"Load from backup file"} onPress={() => {}} />
-                <DrawerItem label={"Seed Initial data"} onPress={() => {}} />
+                <DrawerItem label={"Seed Initial data"} onPress={() => seedInitialData()} />
                 <DrawerItem label={"Clear Database"} onPress={clearDatabase} />
-                <DrawerItem label={"Signout"} onPress={() => {}} />
+                <DrawerItem label={"Signout"} onPress={() => handleLogout(null)} />
             </View>
         </DrawerContentScrollView>
     )
 
 }
 
-const AppDrawer = () => {
+const AppDrawer = ({ userInfo, handleLogout }) => {
+    console.log("USER INFO IN DRAWER", {userInfo});
     return (
         <Drawer.Navigator initialRouteName="Home"
             screenOptions={{ headerShown: false,}}
-            drawerContent={(props => <CustomDrawerContent {...props} />)}
+            // drawerContent={(props => <CustomDrawerContent {...props} />)}
+            drawerContent={props => (
+                <CustomDrawerContent 
+                    {...props}
+                    userInfo={userInfo}
+                    handleLogout={handleLogout}
+                />
+            )}
         >
             <Drawer.Screen name="Home" component={AppTabs} />
         </Drawer.Navigator>

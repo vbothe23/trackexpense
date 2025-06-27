@@ -3,15 +3,28 @@ import axios from "axios";
 import { ToastAndroid } from "react-native";
 import RNFS from "react-native-fs";
 
-const GOOGLE_WELCIENT_ID = "";
+const GOOGLE_WELCIENT_ID = "***REMOVED***";
 
 export const configureGoogleSignIn = () => {
     GoogleSignin.configure({
         webClientId: GOOGLE_WELCIENT_ID,
         scopes: ["https://www.googleapis.com/auth/drive.appdata"],
         offlineAccess: true,
+        prompt: 'consent',
     });
 }
+
+
+export const signOut = async (): Promise<void> => {
+  try {
+    await GoogleSignin.revokeAccess();
+    await GoogleSignin.signOut();
+    ToastAndroid.show("Signout Successful", ToastAndroid.SHORT);
+  } catch (error) {
+    ToastAndroid.show("Signout Failed", ToastAndroid.SHORT);
+    console.error("Signout Error: ", error);
+  }
+};
 
 export const getAccessToken = async () => {
     try {
