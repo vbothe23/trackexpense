@@ -1,14 +1,15 @@
-import React from 'react'
-import { Dimensions, ScrollView, Text, View } from 'react-native'
+import React, { useEffect } from 'react'
+import { Dimensions, ScrollView, Text, View, Button } from 'react-native'
 import { LineChart, PieChart } from 'react-native-chart-kit';
+import { yearlyExpenseQuery } from '../../db/queries/analyticsQueries';
 
 
 const screenWidth = Dimensions.get('window').width;
 
-const monthlySpending = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr'],
-    data: [5000, 6500, 4000, 7000]
-  };
+// const monthlySpending = {
+//     labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+//     data: [5000, 6500, 4000, 7000]
+//   };
 
   const categorySpending = [
     {
@@ -29,21 +30,51 @@ const monthlySpending = {
 
 const Summary: React.FC = () => {
 
+  const [monthlySpending, setMonthlySpending] = React.useState({});
+
+
+  useEffect(() => {
+    getMonthlySpendData();
+  }, []);
+
+  const getMonthlySpendData = async () => {
+    try {
+      const result = await yearlyExpenseQuery(2025);
+      setMonthlySpending({
+        labels: result.map(row => row.year_month),
+        data: result.map(row => row.total_spent)
+      });
+    } catch (error) {
+      console.error("Error fetching monthly spend data:", error);
+    }
+  };
+
   return (
     <ScrollView style={styles.container}>
+
+      {/* <Button
+        title="Add Expense"
+        onPress={getMonthlySpendData}
+        /> */}
+
+
       {/* Chart 1: Month vs amount spent */}
       <View style={styles.chartContainer}>
         <Text style={styles.chartTitle}>Monthly spending Trend</Text>
-        <LineChart 
-          data={{
-            labels: monthlySpending.labels,
-            datasets: [ { data: monthlySpending.data } ]
-          }}
-          width={screenWidth - 32}
-          height={220}
-          chartConfig={chartConfig}
-          bezier
-        />
+        { monthlySpending.labels && monthlySpending.data ? (
+          <LineChart 
+            data={{
+              labels: monthlySpending.labels,
+              datasets: [ { data: monthlySpending.data } ]
+            }}
+            width={screenWidth - 32}
+            height={220}
+            chartConfig={chartConfig}
+            bezier
+          />
+        ) : (
+          <Text>No data available</Text>
+        )}
       </View>
 
       {/* Chart 2: Category vs amount spent */}
