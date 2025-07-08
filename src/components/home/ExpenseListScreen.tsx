@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Modal, View, ScrollView, StyleSheet, Alert } from "react-native";
-import { Button, Card, DataTable, FAB, Text } from "react-native-paper";
+import { Modal, View, ScrollView, StyleSheet, Alert, TouchableOpacity } from "react-native";
+import { Button, Card, DataTable, FAB, Text, TextInput } from "react-native-paper";
 import { StackNavigationProp } from "@react-navigation/stack";
 import ExpenseForm from "./ExpenseForm";
+import DateTimePicker from '@react-native-community/datetimepicker';
 import { ExpenseModel } from "../../db/model/models";
 import { clearDatabase, createExpense, exportDataBase, readExpenses, restoreFromBackup, updateExpense } from "../../db/queries/models";
 import { ExpenseType, ExpenseViewModel } from "../../common/types";
@@ -30,10 +31,13 @@ const ExpenseListScreen: React.FC<{ navigation: StackNavigationProp<any> }> = ({
     const [page, setPage] = useState(1);
     const [rowsPerPage, setRowsPerPage] = useState(5);
     const [totals, setTotals] = useState({});
+    const [filterStartDate, setFilterStartDate] = useState<Date | null>(null);
+    const [filterEndDate, setFilterEndDate] = useState<Date | null>(null);
 
 
     useEffect(() => {
         getExpenses();
+        setDefaultDateFilter();
     }, []);
 
     useEffect(() => {
@@ -48,6 +52,15 @@ const ExpenseListScreen: React.FC<{ navigation: StackNavigationProp<any> }> = ({
     }, {});
     setTotals(newTotals);
 }, [expenses]);
+
+const setDefaultDateFilter = () => {
+    const today = new Date();
+    const firstDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+    const lastDayOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+
+    setFilterStartDate(firstDayOfMonth);
+    setFilterEndDate(lastDayOfMonth);
+}
 
     const handleSave = (newExpense: ExpenseType) => {
 
@@ -155,6 +168,13 @@ const calculation = () => {
     .reduce((total, expense) => total + expense.amount, 0);
 }
 
+const onDateChange = (event: any, selectedDate?: Date) => {
+    setShowPicker(false);
+    if (selectedDate) {
+      setSelectedDate(selectedDate);
+    }
+  };
+
 const categories = [
     "Necessities",
     "Savings & Investments",
@@ -175,8 +195,9 @@ const categories = [
                 alignItems: 'stretch',
             }}
             >
+                
 
-                {categories.map(category => (
+                {/* {categories.map(category => (
                     <HomePageCard 
                         key={category}
                         category={category} 
@@ -186,50 +207,65 @@ const categories = [
                             setModalVisible(true);
                         }}
                     />
-                ))}
-
-                {/* Uncomment this section if you want to display totals dynamically */}
-
-
-
-
-
-
-
-
-
-
-                {/* {totals && Object.entries(totals).map(([category, price]) => (
-                    <HomePageCard 
-                        key={category}
-                        category={category} 
-                        price={price} 
-                        onPress={() => {
-                            setSelectedExpense(null);
-                            setModalVisible(true);
-                        }}
-                    />
                 ))} */}
-                
-                {/* <HomePageCard 
-                category="Necessities" 
-                price={30000} />
-            
-                <HomePageCard 
-                    category="Savings & Investments" 
-                    price={30000} />
-                
-                <HomePageCard 
-                    category="Education" 
-                    price={3000} />
-                
-                <HomePageCard 
-                    category="Enjoyment" 
-                    price={30000} />
-                
-                <HomePageCard 
-                    category="Other" 
-                    price={4005400} /> */}
+            </View>
+
+            {/* <View>
+                <DateTimePicker
+          value={filterStartDate}
+          mode="date"
+          display="default"
+          onChange={onDateChange}
+        />
+        <DateTimePicker
+          value={filterEndDate}
+          mode="date"
+          display="default"
+          onChange={onDateChange}
+        />
+            </View> */}
+
+            <View>
+                <Text style={{}}>Start Date:</Text>
+            <TouchableOpacity
+        onPress={() => {}}
+        activeOpacity={0.8}
+      >
+        <TextInput
+          style={{}}
+          value={filterStartDate?.toDateString()}
+          editable={false}
+        />
+      </TouchableOpacity>
+      {filterStartDate && (
+        <DateTimePicker
+          value={filterStartDate}
+          mode="date"
+          display="default"
+          onChange={() => {}}
+        />
+      )}
+            </View>
+             <View>
+                <Text style={{}}>End Date:</Text>
+            <TouchableOpacity
+        onPress={() => {}}
+        activeOpacity={0.8}
+      >
+        <TextInput
+          style={{}}
+          value={filterEndDate?.toDateString()}
+          editable={false}
+        />
+      </TouchableOpacity>
+      {filterStartDate && (
+        <DateTimePicker
+          value={filterStartDate}
+          mode="date"
+          display="default"
+          onChange={() => {}}
+        />
+      )}
             </View>
 
             <ScrollView>
@@ -245,63 +281,6 @@ const categories = [
                 ))}
             </View>
             </ScrollView>
-        
-
-
-
-
-            {/* <ScrollView horizontal>
-                <DataTable>
-                    <DataTable.Header>
-                        <DataTable.Title style={[styles.column, styles.headerCell]} textStyle={styles.headerText}>Date</DataTable.Title>
-                        <DataTable.Title style={[styles.column, styles.headerCell]} textStyle={styles.headerText}>Category</DataTable.Title>
-                        <DataTable.Title style={[styles.column, styles.headerCell]} textStyle={styles.headerText}>Subcategory</DataTable.Title>
-                        <DataTable.Title style={[styles.column, styles.headerCell]} textStyle={styles.headerText}>Amount</DataTable.Title>
-                        <DataTable.Title style={[styles.column, styles.headerCell]} textStyle={styles.headerText}>Payment Method</DataTable.Title>
-                        <DataTable.Title style={[styles.column, styles.headerCell]} textStyle={styles.headerText}>Notes</DataTable.Title>
-                    </DataTable.Header>
-
-                    {expenses
-                        .slice((page - 1) * rowsPerPage, page * rowsPerPage)
-                        .map(expense => (
-                            <DataTable.Row
-                                key={expense.id}
-                                onPress={() => {
-                                    setModalVisible(true);
-                                    setSelectedExpense({
-                                        id: expense.id,
-                                        date: expense.date,
-                                        category: expense.category,
-                                        subcategory: expense.subcategory,
-                                        amount: expense.amount,
-                                        paymentMode: expense.paymentMode,
-                                        notes: expense.notes,
-                                    });
-                                }}
-                            >
-                                <DataTable.Cell style={[styles.column, styles.cell]} textStyle={styles.cellText}>{expense.date}</DataTable.Cell>
-                                <DataTable.Cell style={[styles.column, styles.cell]} textStyle={styles.cellText}>{expense.category?.displayName}</DataTable.Cell>
-                                <DataTable.Cell style={[styles.column, styles.cell]} textStyle={styles.cellText}>{expense.subcategory?.displayName}</DataTable.Cell>
-                                <DataTable.Cell style={[styles.column, styles.cell]} textStyle={styles.cellText}>{formatINR(expense.amount)}</DataTable.Cell>
-                                <DataTable.Cell style={[styles.column, styles.cell]} textStyle={styles.cellText}>{expense.paymentMode?.displayName}</DataTable.Cell>
-                                <DataTable.Cell style={[styles.column, styles.cell]} textStyle={styles.cellText}>{expense.notes}</DataTable.Cell>
-                            </DataTable.Row>
-                        ))
-                    }
-
-                    <DataTable.Pagination
-                        page={page - 1}
-                        numberOfPages={Math.ceil(expenses.length / rowsPerPage)}
-                        onPageChange={newPage => setPage(newPage + 1)}
-                        label={`${(page - 1) * rowsPerPage + 1}-${Math.min(page * rowsPerPage, expenses.length)} of ${expenses.length}`}
-                        showFastPaginationControls
-                        numberOfItemsPerPage={rowsPerPage}
-                        selectPageDropdownLabel={'Rows per page'}
-                        // Add next/previous page buttons if not visible
-                        // react-native-paper DataTable.Pagination already provides next/prev buttons
-                    />
-                </DataTable>
-            </ScrollView> */}
             
             <FAB
                 style={styles.fab}

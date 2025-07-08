@@ -1,10 +1,10 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Q } from "@nozbe/watermelondb"
 import { database } from ".."
 import { Alert } from "react-native"
 import { CategoryModel, ExpenseModel, PaymentModeModel, SubcategoryModel } from "../model/models"
 import { v4 as uuidv4 } from 'uuid';
 import RNFS from "react-native-fs";
-
 // Category CRUD
 export const createCategory = async (key: string, displayName: string) => {  
     return database.write(() => {
@@ -241,7 +241,8 @@ export const clearDatabase = async () => {
       await Promise.all(paymentModes.map(record => record.destroyPermanently()));
       await Promise.all(expenses.map(record => record.destroyPermanently()));
     });
-
+    // await AsyncStorage.setItem('db_seeded', 'false');
+    await AsyncStorage.setItem('db_seeded', 'false');
     console.log('All data cleared successfully.');
 
   } catch (error) {

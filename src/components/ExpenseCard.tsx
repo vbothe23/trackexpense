@@ -29,9 +29,9 @@ const styles = StyleSheet.create({
     card: {
         flexDirection: 'row',
         backgroundColor: '#fff',
-        borderRadius: 8,
+        borderRadius: 1,
         padding: 10,
-        margin: 2,
+        margin: 0,
         elevation: 1, // shadow on Android
         justifyContent: 'space-between',
         alignItems: 'center',

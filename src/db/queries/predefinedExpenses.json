@@ -1430,5 +1430,254 @@
         "amount": 630,
         "description": "Monthly medicine purchase",
         "paymentModeKey": "UPI"
-    }
+    },
+    {
+    "date": "2025-03-05",
+    "categoryKey": "Savings_Investment",
+    "subcategoryKey": "Mutual_Fund",
+    "amount": 2000,
+    "description": "Monthly SIP investment",
+    "paymentModeKey": "Net_Banking"
+},
+{
+    "date": "2025-03-20",
+    "categoryKey": "Savings_Investment",
+    "subcategoryKey": "Stocks",
+    "amount": 3500,
+    "description": "Stock purchase",
+    "paymentModeKey": "Net_Banking"
+},
+{
+    "date": "2025-04-10",
+    "categoryKey": "Savings_Investment",
+    "subcategoryKey": "Gold",
+    "amount": 1500,
+    "description": "Gold ETF investment",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-05-01",
+    "categoryKey": "Education",
+    "subcategoryKey": "",
+    "amount": 1200,
+    "description": "Online course subscription",
+    "paymentModeKey": "Credit_Card"
+},
+{
+    "date": "2025-04-15",
+    "categoryKey": "Education",
+    "subcategoryKey": "",
+    "amount": 500,
+    "description": "Books and study material",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-03-25",
+    "categoryKey": "Contribution",
+    "subcategoryKey": "",
+    "amount": 800,
+    "description": "Charity donation",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-05-10",
+    "categoryKey": "Contribution",
+    "subcategoryKey": "",
+    "amount": 300,
+    "description": "Temple offering",
+    "paymentModeKey": "Cash"
+},
+{
+    "date": "2025-02-28",
+    "categoryKey": "Other",
+    "subcategoryKey": "",
+    "amount": 450,
+    "description": "Miscellaneous expense",
+    "paymentModeKey": "Cash"
+},
+{
+    "date": "2025-04-22",
+    "categoryKey": "Other",
+    "subcategoryKey": "",
+    "amount": 600,
+    "description": "Gift for friend",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-06-01",
+    "categoryKey": "Necessities",
+    "subcategoryKey": "Rent",
+    "amount": 10500,
+    "description": "Monthly rent",
+    "paymentModeKey": "Cash"
+},
+{
+    "date": "2025-06-01",
+    "categoryKey": "Necessities",
+    "subcategoryKey": "Food",
+    "amount": 240,
+    "description": "Daily meals",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-06-02",
+    "categoryKey": "Necessities",
+    "subcategoryKey": "Food",
+    "amount": 230,
+    "description": "Lunch and Snacks",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-06-03",
+    "categoryKey": "Necessities",
+    "subcategoryKey": "Food",
+    "amount": 245,
+    "description": "Daily meals",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-06-04",
+    "categoryKey": "Necessities",
+    "subcategoryKey": "Grooming",
+    "amount": 390,
+    "description": "Salon visit",
+    "paymentModeKey": "Cash"
+},
+{
+    "date": "2025-06-05",
+    "categoryKey": "Necessities",
+    "subcategoryKey": "Transport",
+    "amount": 1280,
+    "description": "Monthly petrol expense",
+    "paymentModeKey": "Debit Card"
+},
+{
+    "date": "2025-06-06",
+    "categoryKey": "Enjoyment",
+    "subcategoryKey": "Hangout",
+    "amount": 950,
+    "description": "Bowling night",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-06-10",
+    "categoryKey": "Savings_Investment",
+    "subcategoryKey": "Mutual_Fund",
+    "amount": 2100,
+    "description": "Monthly SIP investment",
+    "paymentModeKey": "Net_Banking"
+},
+{
+    "date": "2025-06-15",
+    "categoryKey": "Savings_Investment",
+    "subcategoryKey": "Stocks",
+    "amount": 4000,
+    "description": "Stock purchase",
+    "paymentModeKey": "Net_Banking"
+},
+{
+    "date": "2025-06-20",
+    "categoryKey": "Education",
+    "subcategoryKey": "",
+    "amount": 1300,
+    "description": "Online workshop fee",
+    "paymentModeKey": "Credit_Card"
+},
+{
+    "date": "2025-06-22",
+    "categoryKey": "Contribution",
+    "subcategoryKey": "",
+    "amount": 500,
+    "description": "NGO donation",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-06-25",
+    "categoryKey": "Other",
+    "subcategoryKey": "",
+    "amount": 700,
+    "description": "Household repair",
+    "paymentModeKey": "Cash"
+},
+{
+    "date": "2025-07-01",
+    "categoryKey": "Necessities",
+    "subcategoryKey": "Rent",
+    "amount": 10500,
+    "description": "Monthly rent",
+    "paymentModeKey": "Cash"
+},
+{
+    "date": "2025-07-01",
+    "categoryKey": "Necessities",
+    "subcategoryKey": "Food",
+    "amount": 250,
+    "description": "Daily meals",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-07-02",
+    "categoryKey": "Necessities",
+    "subcategoryKey": "Food",
+    "amount": 235,
+    "description": "Lunch and Snacks",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-07-03",
+    "categoryKey": "Necessities",
+    "subcategoryKey": "Food",
+    "amount": 245,
+    "description": "Daily meals",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-07-04",
+    "categoryKey": "Necessities",
+    "subcategoryKey": "Health",
+    "amount": 670,
+    "description": "Monthly medicine purchase",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-07-05",
+    "categoryKey": "Enjoyment",
+    "subcategoryKey": "Travel",
+    "amount": 2200,
+    "description": "Weekend trip to Ooty",
+    "paymentModeKey": "Debit Card"
+},
+{
+    "date": "2025-07-08",
+    "categoryKey": "Savings_Investment",
+    "subcategoryKey": "Gold",
+    "amount": 1600,
+    "description": "Gold ETF investment",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-07-08",
+    "categoryKey": "Education",
+    "subcategoryKey": "",
+    "amount": 600,
+    "description": "Exam registration fee",
+    "paymentModeKey": "UPI"
+},
+{
+    "date": "2025-07-08",
+    "categoryKey": "Contribution",
+    "subcategoryKey": "",
+    "amount": 400,
+    "description": "Community event support",
+    "paymentModeKey": "Cash"
+},
+{
+    "date": "2025-07-08",
+    "categoryKey": "Other",
+    "subcategoryKey": "",
+    "amount": 350,
+    "description": "Stationery purchase",
+    "paymentModeKey": "UPI"
+}
+    
 ]

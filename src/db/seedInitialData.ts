@@ -62,7 +62,7 @@ const predefinedPaymentModes = [
 
 export const seedInitialData = async () => {
     const isSeeded = await AsyncStorage.getItem('db_seeded');
-    if (isSeeded) {
+    if (isSeeded === 'true') {
         console.log("Database already seeded.");
         return;
     }
