@@ -3,7 +3,7 @@ import axios from "axios";
 import { ToastAndroid } from "react-native";
 import RNFS from "react-native-fs";
 
-const GOOGLE_WELCIENT_ID = "***REMOVED***";
+const GOOGLE_WELCIENT_ID = "";
 
 export const configureGoogleSignIn = () => {
     GoogleSignin.configure({
